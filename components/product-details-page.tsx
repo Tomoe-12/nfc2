@@ -321,20 +321,20 @@ export default function ProductDetailsPage() {
   return (
     <>
       <div className="min-h-screen bg-black text-white main-content">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
           {/* Elegant Header */}
           <div className="luxury-card mb-8 sm:mb-12">
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 sm:gap-6">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-2xl shadow-blue-500/30 luxury-glow">
-                    <div className="text-white font-bold text-xl sm:text-2xl font-serif">S</div>
+                <div className="flex items-center gap-3 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-2xl shadow-blue-500/30 luxury-glow">
+                    <div className="text-white font-bold text-lg sm:text-2xl font-serif">S</div>
                   </div>
                   <div>
-                    <h1 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-blue-400 font-serif tracking-wide">
+                    <h1 className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-blue-400 font-serif tracking-wide">
                       SanShin
                     </h1>
-                    <p className="text-blue-200/80 text-sm sm:text-base font-light tracking-wider">Luxury Collection</p>
+                    <p className="text-blue-200/80 text-xs sm:text-base font-light tracking-wider">Luxury Collection</p>
                   </div>
                 </div>
                 <Button
@@ -342,15 +342,15 @@ export default function ProductDetailsPage() {
                   size="icon"
                   className="text-blue-300 hover:text-white transition-all duration-300 hover:bg-blue-500/20 border border-blue-500/30 hover:border-blue-400"
                 >
-                  <Expand className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Expand className="h-4 w-4 sm:h-6 sm:w-6" />
                 </Button>
               </div>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {/* Elegant Photo Section */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Main Image with Auto-scroll */}
               <div className="relative group w-full">
                 <div className="aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-black shadow-2xl shadow-black/50 luxury-border">
@@ -389,7 +389,7 @@ export default function ProductDetailsPage() {
                   {productImages.map((_, index) => (
                     <button
                       key={index}
-                      className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${
                         index === currentImageIndex
                           ? "bg-blue-400 scale-125 shadow-lg shadow-blue-400/50"
                           : "bg-blue-400/30 hover:bg-blue-400/60"
@@ -400,13 +400,13 @@ export default function ProductDetailsPage() {
                 </div>
 
                 {/* Elegant Counter */}
-                <div className="absolute top-6 right-6 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 text-sm border border-blue-500/30 text-blue-200 font-light">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-black/60 backdrop-blur-md rounded-full px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm border border-blue-500/30 text-blue-200 font-light">
                   {currentImageIndex + 1} of {productImages.length}
                 </div>
 
                 {/* Premium Badge */}
-                <div className="absolute top-6 left-6">
-                  <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-3 py-1 shadow-lg">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-2 py-1 text-xs sm:text-sm shadow-lg">
                     <Crown className="w-3 h-3 mr-1" />
                     Premium
                   </Badge>
@@ -414,7 +414,7 @@ export default function ProductDetailsPage() {
               </div>
 
               {/* Elegant Thumbnail Images */}
-              <div className="grid grid-cols-5 gap-2 sm:gap-3">
+              <div className="grid grid-cols-5 gap-1 sm:gap-3">
                 {productImages.map((image, index) => (
                   <button
                     key={index}
@@ -438,75 +438,84 @@ export default function ProductDetailsPage() {
             </div>
 
             {/* Elegant Product Details */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {/* Premium Specifications */}
               <div className="luxury-card">
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-8 font-serif">
-                    <Gem className="w-6 h-6 text-blue-400" />
+                <div className="p-4 sm:p-6 md:p-8">
+                  <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-6 sm:mb-8 font-serif">
+                    <Gem className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                     Product Specifications
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <Package className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Product Number</p>
-                        <p className="text-white font-semibold text-lg">001</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Product Number</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">001</p>
                       </div>
                     </div>
 
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-gray-500 rounded-xl flex items-center justify-center shadow-lg shadow-gray-500/30">
-                        <Expand className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Expand className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Size</p>
-                        <p className="text-white font-semibold text-lg">S</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Size</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">S</p>
                       </div>
                     </div>
 
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <Calendar className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Release Date</p>
-                        <p className="text-white font-semibold text-lg">2025-2-12</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Launch Date</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">2025-2-12</p>
                       </div>
                     </div>
 
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-slate-500 rounded-xl flex items-center justify-center shadow-lg shadow-slate-500/30">
-                        <Palette className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Palette className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Color</p>
-                        <p className="text-white font-semibold text-lg">Midnight Black</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Color</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">Midnight Black</p>
                       </div>
                     </div>
 
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center shadow-lg shadow-gray-500/30">
-                        <Shirt className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Shirt className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Material</p>
-                        <p className="text-white font-semibold text-lg">Premium Cotton</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Material</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">Premium Cotton</p>
                       </div>
                     </div>
 
                     <div className="luxury-spec-item">
-                      <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <Store className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Store className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-blue-200/70 text-sm font-light tracking-wide">Atelier</p>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Atelier</p>
                         <div className="flex items-center gap-2">
-                          <p className="text-white font-semibold text-lg">SanShin</p>
-                          <Link className="w-4 h-4 text-blue-400 hover:text-blue-300 transition-colors" />
+                          <p className="text-white font-semibold text-sm sm:text-lg">SanShin</p>
+                          <Link className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400 hover:text-blue-300 transition-colors" />
                         </div>
+                      </div>
+                    </div>
+                    <div className="luxury-spec-item">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                      </div>
+                      <div>
+                        <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">Weight</p>
+                        <p className="text-white font-semibold text-sm sm:text-lg">180g</p>
                       </div>
                     </div>
                   </div>
@@ -515,50 +524,159 @@ export default function ProductDetailsPage() {
 
               {/* Elegant Features */}
               <div className="luxury-card">
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-8 font-serif">
-                    <Sparkles className="w-6 h-6 text-blue-400" />
+                <div className="p-4 sm:p-6 md:p-8">
+                  <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-6 sm:mb-8 font-serif">
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                     Luxury Features
                   </h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                     <div className="luxury-feature-card">
-                      <Leaf className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                      <Leaf className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mx-auto mb-2 sm:mb-3" />
                       <p className="text-xs text-blue-200 font-light tracking-wider">Sustainable</p>
                     </div>
                     <div className="luxury-feature-card">
-                      <Shield className="w-8 h-8 text-white mx-auto mb-3" />
+                      <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white mx-auto mb-2 sm:mb-3" />
                       <p className="text-xs text-blue-200 font-light tracking-wider">Durable</p>
                     </div>
                     <div className="luxury-feature-card">
-                      <Crown className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                      <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mx-auto mb-2 sm:mb-3" />
                       <p className="text-xs text-blue-200 font-light tracking-wider">Premium</p>
                     </div>
                     <div className="luxury-feature-card">
-                      <Award className="w-8 h-8 text-white mx-auto mb-3" />
+                      <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white mx-auto mb-2 sm:mb-3" />
                       <p className="text-xs text-blue-200 font-light tracking-wider">Certified</p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* Elegant Care Instructions */}
-              <div className="luxury-card">
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-8 font-serif">
-                    Care Instructions
-                  </h3>
-                  <div className="flex gap-4 sm:gap-6 justify-center">
-                    {["🧺", "△", "⬜", "🔥", "○"].map((icon, index) => (
-                      <div key={index} className="luxury-care-icon">
-                        <span className="text-xl sm:text-2xl">{icon}</span>
-                        {index === 2 && (
+          {/* Redesigned Care Instructions */}
+          <div className="luxury-card mt-8 sm:mt-12">
+            <div className="p-4 sm:p-6 md:p-8">
+              <div className="text-center mb-6 sm:mb-10">
+                <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-2 sm:mb-4 font-serif">
+                  Care Instructions
+                </h3>
+                <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide max-w-md mx-auto">
+                  Follow these guidelines to maintain the premium quality and longevity of your garment
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {[
+                  {
+                    icon: "🧺",
+                    title: "Machine Wash",
+                    description: "30°C gentle cycle",
+                    detail: "Use mild detergent and wash with similar colors",
+                    color: "from-blue-500/20 to-cyan-500/20",
+                    borderColor: "border-blue-500/30",
+                    iconBg: "bg-blue-500/20",
+                  },
+                  {
+                    icon: "△",
+                    title: "No Bleach",
+                    description: "Avoid chlorine bleach",
+                    detail: "Use oxygen-based bleach if necessary",
+                    color: "from-red-500/20 to-pink-500/20",
+                    borderColor: "border-red-500/30",
+                    iconBg: "bg-red-500/20",
+                  },
+                  {
+                    icon: "⬜",
+                    title: "Air Dry Only",
+                    description: "No tumble drying",
+                    detail: "Hang or lay flat to dry naturally",
+                    color: "from-orange-500/20 to-yellow-500/20",
+                    borderColor: "border-orange-500/30",
+                    iconBg: "bg-orange-500/20",
+                    crossed: true,
+                  },
+                  {
+                    icon: "🔥",
+                    title: "Iron Low Heat",
+                    description: "Maximum 110°C",
+                    detail: "Iron inside out to protect the fabric",
+                    color: "from-purple-500/20 to-indigo-500/20",
+                    borderColor: "border-purple-500/30",
+                    iconBg: "bg-purple-500/20",
+                  },
+                  {
+                    icon: "○",
+                    title: "Dry Clean Safe",
+                    description: "Professional cleaning",
+                    detail: "Recommended for best results",
+                    color: "from-green-500/20 to-emerald-500/20",
+                    borderColor: "border-green-500/30",
+                    iconBg: "bg-green-500/20",
+                  },
+                  {
+                    icon: "💧",
+                    title: "No Fabric Softener",
+                    description: "Maintains texture",
+                    detail: "Preserves the premium cotton feel",
+                    color: "from-teal-500/20 to-blue-500/20",
+                    borderColor: "border-teal-500/30",
+                    iconBg: "bg-teal-500/20",
+                  },
+                ].map((care, index) => (
+                  <div
+                    key={index}
+                    className={`care-instruction-card group relative overflow-hidden rounded-2xl border ${care.borderColor} bg-gradient-to-br ${care.color} backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10`}
+                  >
+                    {/* Animated background gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <div className="relative p-4 sm:p-6">
+                      {/* Icon container */}
+                      <div
+                        className={`w-12 h-12 sm:w-16 sm:h-16 ${care.iconBg} rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto relative overflow-hidden group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <span className="text-xl sm:text-2xl relative z-10">{care.icon}</span>
+
+                        {/* Crossed out effect for "Do Not Tumble Dry" */}
+                        {care.crossed && (
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-8 h-0.5 bg-red-400 rotate-45 shadow-lg shadow-red-400/50"></div>
-                            <div className="w-8 h-0.5 bg-red-400 -rotate-45 absolute shadow-lg shadow-red-400/50"></div>
+                            <div className="w-8 sm:w-10 h-0.5 bg-red-400 rotate-45 shadow-lg shadow-red-400/50"></div>
+                            <div className="w-8 sm:w-10 h-0.5 bg-red-400 -rotate-45 absolute shadow-lg shadow-red-400/50"></div>
                           </div>
                         )}
+
+                        {/* Subtle glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
-                    ))}
+
+                      {/* Content */}
+                      <div className="text-center space-y-1 sm:space-y-2">
+                        <h4 className="text-white font-semibold text-sm sm:text-lg tracking-wide">{care.title}</h4>
+                        <p className="text-blue-200/80 text-xs sm:text-sm font-medium">{care.description}</p>
+                        <p className="text-blue-200/60 text-xs font-light leading-relaxed hidden sm:block">
+                          {care.detail}
+                        </p>
+                      </div>
+
+                      {/* Hover indicator */}
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Additional care tips */}
+              <div className="mt-6 sm:mt-8 p-4 sm:p-6 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-blue-400 text-xs sm:text-sm">💡</span>
+                  </div>
+                  <div>
+                    <h5 className="text-white font-medium text-sm sm:text-base mb-1 sm:mb-2">Pro Care Tips</h5>
+                    <ul className="text-blue-200/70 text-xs sm:text-sm space-y-1 font-light">
+                      <li>• Store on padded hangers to maintain shape</li>
+                      <li>• Wash inside out to preserve color and print</li>
+                      <li>• Remove immediately after washing to prevent wrinkles</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -566,30 +684,40 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* Elegant Size Chart */}
-          <div className="luxury-card mt-12">
-            <div className="p-6 sm:p-8">
-              <h3 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-8 font-serif">
-                <Globe className="w-6 h-6 text-blue-400" />
+          <div className="luxury-card mt-8 sm:mt-12">
+            <div className="p-4 sm:p-6 md:p-8">
+              <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-6 sm:mb-8 font-serif">
+                <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                 Size Chart
               </h3>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-blue-500/20">
-                      <th className="text-left p-6 text-blue-200 font-light tracking-wider">Size</th>
-                      <th className="text-left p-6 text-blue-200 font-light tracking-wider">Shoulder</th>
-                      <th className="text-left p-6 text-blue-200 font-light tracking-wider">Chest</th>
-                      <th className="text-left p-6 text-blue-200 font-light tracking-wider">Sleeve</th>
-                      <th className="text-left p-6 text-blue-200 font-light tracking-wider">Length</th>
+                      <th className="text-left p-3 sm:p-6 text-blue-200 font-light tracking-wider text-xs sm:text-sm">
+                        Size
+                      </th>
+                      <th className="text-left p-3 sm:p-6 text-blue-200 font-light tracking-wider text-xs sm:text-sm">
+                        Shoulder
+                      </th>
+                      <th className="text-left p-3 sm:p-6 text-blue-200 font-light tracking-wider text-xs sm:text-sm">
+                        Chest
+                      </th>
+                      <th className="text-left p-3 sm:p-6 text-blue-200 font-light tracking-wider text-xs sm:text-sm">
+                        Sleeve
+                      </th>
+                      <th className="text-left p-3 sm:p-6 text-blue-200 font-light tracking-wider text-xs sm:text-sm">
+                        Length
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="hover:bg-blue-500/5 transition-colors border-b border-blue-500/10">
-                      <td className="p-6 text-white font-semibold text-lg">S</td>
-                      <td className="p-6 text-white font-light">21"</td>
-                      <td className="p-6 text-white font-light">23"</td>
-                      <td className="p-6 text-white font-light">10"</td>
-                      <td className="p-6 text-white font-light">29"</td>
+                      <td className="p-3 sm:p-6 text-white font-semibold text-sm sm:text-lg">S</td>
+                      <td className="p-3 sm:p-6 text-white font-light text-sm">21"</td>
+                      <td className="p-3 sm:p-6 text-white font-light text-sm">23"</td>
+                      <td className="p-3 sm:p-6 text-white font-light text-sm">10"</td>
+                      <td className="p-3 sm:p-6 text-white font-light text-sm">29"</td>
                     </tr>
                   </tbody>
                 </table>
@@ -598,23 +726,25 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* Elegant Details Grid */}
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <div className="luxury-card">
-              <div className="p-6 sm:p-8">
-                <h3 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-8 font-serif">
-                  <Clock className="w-6 h-6 text-blue-400" />
+              <div className="p-4 sm:p-6 md:p-8">
+                <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-6 sm:mb-8 font-serif">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                   Craftsmanship Details
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div className="luxury-detail-item">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <Clock className="w-5 h-5 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-blue-200/80 font-light tracking-wide text-sm">Handcrafted Time</span>
+                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">
+                          Handcrafted Time
+                        </span>
                         <div className="mt-1">
-                          <Badge className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 border-blue-500/30 font-light">
+                          <Badge className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 border-blue-500/30 font-light text-xs">
                             2-3 weeks
                           </Badge>
                         </div>
@@ -623,14 +753,16 @@ export default function ProductDetailsPage() {
                   </div>
 
                   <div className="luxury-detail-item">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
-                        <Shield className="w-5 h-5 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
+                        <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-blue-200/80 font-light tracking-wide text-sm">Quality Assurance</span>
+                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">
+                          Quality Assurance
+                        </span>
                         <div className="mt-1">
-                          <Badge className="bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 border-green-500/30 font-light">
+                          <Badge className="bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 border-green-500/30 font-light text-xs">
                             Master Approved
                           </Badge>
                         </div>
@@ -639,28 +771,34 @@ export default function ProductDetailsPage() {
                   </div>
 
                   <div className="luxury-detail-item">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
-                        <Globe className="w-5 h-5 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
+                        <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-blue-200/80 font-light tracking-wide text-sm">Origin</span>
+                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">Origin</span>
                         <div className="mt-1">
-                          <span className="text-white font-semibold text-lg">Handmade in Myanmar</span>
+                          <Badge className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 border-purple-500/30 font-light text-xs">
+                            Handmade in Myanmar
+                          </Badge>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="luxury-detail-item">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
-                        <Gem className="w-5 h-5 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
+                        <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-blue-200/80 font-light tracking-wide text-sm">Collection ID</span>
+                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">
+                          Limited Run
+                        </span>
                         <div className="mt-1">
-                          <span className="text-white font-semibold text-lg tracking-wider">SS-LUX-2025-001</span>
+                          <Badge className="bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-300 border-amber-500/30 font-light text-xs">
+                            One of 100 Exclusive Pieces
+                          </Badge>
                         </div>
                       </div>
                     </div>
@@ -671,30 +809,30 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* Elegant Contact Section */}
-          <div className="luxury-card mt-12">
-            <div className="p-8 sm:p-12">
-              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-6 font-serif">
+          <div className="luxury-card mt-8 sm:mt-12">
+            <div className="p-4 sm:p-8 md:p-12">
+              <h2 className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-3 sm:mb-6 font-serif">
                 Concierge Service
               </h2>
-              <p className="text-blue-200/80 mb-10 font-light tracking-wide text-lg">
+              <p className="text-blue-200/80 mb-6 sm:mb-10 font-light tracking-wide text-sm sm:text-lg">
                 Our luxury concierge team is at your service for any inquiries
               </p>
 
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-12">
+                <div className="space-y-4 sm:space-y-6">
                   <div className="luxury-contact-item">
-                    <Phone className="w-6 h-6 text-blue-400" />
-                    <span className="text-white font-light tracking-wide">+959785146940</span>
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                    <span className="text-white font-light tracking-wide text-sm">+959785146940</span>
                   </div>
                   <div className="luxury-contact-item">
-                    <Mail className="w-6 h-6 text-blue-400" />
-                    <span className="text-white font-light tracking-wide">sanshin739@gmail.com</span>
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                    <span className="text-white font-light tracking-wide text-sm">sanshin739@gmail.com</span>
                   </div>
                 </div>
 
                 <div>
-                  <p className="text-blue-200/80 mb-6 font-light tracking-wider">Follow Our Journey</p>
-                  <div className="flex gap-6">
+                  <p className="text-blue-200/80 mb-4 sm:mb-6 font-light tracking-wider text-sm">Follow Our Journey</p>
+                  <div className="flex gap-4 sm:gap-6">
                     {[
                       { icon: Facebook, color: "text-blue-400" },
                       { icon: Instagram, color: "text-white" },
@@ -704,12 +842,12 @@ export default function ProductDetailsPage() {
                         key={index}
                         variant="ghost"
                         size="icon"
-                        className={`${social.color} hover:scale-110 transform transition-all duration-500 border border-blue-500/20 hover:border-blue-400/50 hover:bg-blue-500/10 w-12 h-12`}
+                        className={`${social.color} hover:scale-110 transform transition-all duration-500 border border-blue-500/20 hover:border-blue-400/50 hover:bg-blue-500/10 w-10 h-10 sm:w-12 sm:h-12`}
                       >
                         {typeof social.icon === "string" ? (
-                          <span className="text-xl font-bold font-serif">{social.icon}</span>
+                          <span className="text-lg sm:text-xl font-bold font-serif">{social.icon}</span>
                         ) : (
-                          <social.icon className="w-6 h-6" />
+                          <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                         )}
                       </Button>
                     ))}
@@ -780,12 +918,19 @@ export default function ProductDetailsPage() {
         .luxury-spec-item {
           display: flex;
           align-items: center;
-          gap: 16px;
-          padding: 20px;
+          gap: 10px;
+          padding: 12px;
           border-radius: 16px;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
           border: 1px solid rgba(59, 130, 246, 0.15);
           transition: all 0.5s ease;
+        }
+        
+        @media (min-width: 640px) {
+          .luxury-spec-item {
+            gap: 16px;
+            padding: 20px;
+          }
         }
         
         .luxury-spec-item:hover {
@@ -797,11 +942,17 @@ export default function ProductDetailsPage() {
         
         .luxury-feature-card {
           text-align: center;
-          padding: 24px 16px;
+          padding: 16px 12px;
           border-radius: 16px;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
           border: 1px solid rgba(59, 130, 246, 0.15);
           transition: all 0.5s ease;
+        }
+        
+        @media (min-width: 640px) {
+          .luxury-feature-card {
+            padding: 24px 16px;
+          }
         }
         
         .luxury-feature-card:hover {
@@ -812,8 +963,8 @@ export default function ProductDetailsPage() {
         }
         
         .luxury-care-icon {
-          width: 56px;
-          height: 56px;
+          width: 120px;
+          height: 80px;
           border: 1px solid rgba(59, 130, 246, 0.2);
           border-radius: 16px;
           display: flex;
@@ -822,6 +973,7 @@ export default function ProductDetailsPage() {
           position: relative;
           transition: all 0.5s ease;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
+          padding: 8px;
         }
         
         .luxury-care-icon:hover {
@@ -831,11 +983,17 @@ export default function ProductDetailsPage() {
         }
         
         .luxury-detail-item {
-          padding: 24px;
+          padding: 16px;
           border-radius: 16px;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
           border: 1px solid rgba(59, 130, 246, 0.1);
           transition: all 0.5s ease;
+        }
+        
+        @media (min-width: 640px) {
+          .luxury-detail-item {
+            padding: 24px;
+          }
         }
         
         .luxury-detail-item:hover {
@@ -864,12 +1022,19 @@ export default function ProductDetailsPage() {
         .luxury-contact-item {
           display: flex;
           align-items: center;
-          gap: 16px;
-          padding: 20px 24px;
+          gap: 12px;
+          padding: 16px;
           border-radius: 16px;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
           border: 1px solid rgba(59, 130, 246, 0.15);
           transition: all 0.5s ease;
+        }
+        
+        @media (min-width: 640px) {
+          .luxury-contact-item {
+            gap: 16px;
+            padding: 20px 24px;
+          }
         }
         
         .luxury-contact-item:hover {
@@ -879,11 +1044,17 @@ export default function ProductDetailsPage() {
         }
 
         .luxury-craft-stat {
-          padding: 20px;
+          padding: 16px;
           border-radius: 16px;
           background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
           border: 1px solid rgba(59, 130, 246, 0.1);
           transition: all 0.5s ease;
+        }
+
+        @media (min-width: 640px) {
+          .luxury-craft-stat {
+            padding: 20px;
+          }
         }
 
         .luxury-craft-stat:hover {
@@ -909,6 +1080,26 @@ export default function ProductDetailsPage() {
         
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out 0.6s both;
+        }
+
+        .care-instruction-card {
+          position: relative;
+          backdrop-filter: blur(10px);
+        }
+
+        .care-instruction-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .care-instruction-card:hover::before {
+          left: 100%;
         }
       `}</style>
     </>
