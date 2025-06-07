@@ -26,7 +26,7 @@ const Details = () => {
             Product Specifications
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-            <div className="luxury-spec-item">
+            {/* <div className="luxury-spec-item">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                 <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
@@ -36,6 +36,20 @@ const Details = () => {
                 </p>
                 <p className="text-white font-semibold text-sm sm:text-lg">
                   001
+                </p>
+              </div>
+            </div> */}
+
+            <div className="luxury-spec-item">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div>
+                <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">
+                  Launch Date
+                </p>
+                <p className="text-white font-semibold text-sm sm:text-lg">
+                  2025-2-12
                 </p>
               </div>
             </div>
@@ -49,20 +63,6 @@ const Details = () => {
                   Size
                 </p>
                 <p className="text-white font-semibold text-sm sm:text-lg">S</p>
-              </div>
-            </div>
-
-            <div className="luxury-spec-item">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">
-                  Launch Date
-                </p>
-                <p className="text-white font-semibold text-sm sm:text-lg">
-                  2025-2-12
-                </p>
               </div>
             </div>
 
@@ -96,6 +96,20 @@ const Details = () => {
 
             <div className="luxury-spec-item">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div>
+                <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">
+                  Weight
+                </p>
+                <p className="text-white font-semibold text-sm sm:text-lg">
+                  180g
+                </p>
+              </div>
+            </div>
+
+            <div className="luxury-spec-item">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                 <Store className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
@@ -110,58 +124,10 @@ const Details = () => {
                 </div>
               </div>
             </div>
-            <div className="luxury-spec-item">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-blue-200/70 text-xs sm:text-sm font-light tracking-wide">
-                  Weight
-                </p>
-                <p className="text-white font-semibold text-sm sm:text-lg">
-                  180g
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Elegant Features */}
-      <div className="luxury-card">
-        <div className="p-4 sm:p-6 md:p-8">
-          <h3 className="text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 flex items-center gap-3 mb-6 sm:mb-8 font-serif">
-            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
-            Luxury Features
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-            <div className="luxury-feature-card">
-              <Leaf className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mx-auto mb-2 sm:mb-3" />
-              <p className="text-xs text-blue-200 font-light tracking-wider">
-                Sustainable
-              </p>
-            </div>
-            <div className="luxury-feature-card">
-              <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white mx-auto mb-2 sm:mb-3" />
-              <p className="text-xs text-blue-200 font-light tracking-wider">
-                Durable
-              </p>
-            </div>
-            <div className="luxury-feature-card">
-              <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mx-auto mb-2 sm:mb-3" />
-              <p className="text-xs text-blue-200 font-light tracking-wider">
-                Premium
-              </p>
-            </div>
-            <div className="luxury-feature-card">
-              <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white mx-auto mb-2 sm:mb-3" />
-              <p className="text-xs text-blue-200 font-light tracking-wider">
-                Certified
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

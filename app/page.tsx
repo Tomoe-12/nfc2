@@ -1,29 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import {
-  ChevronLeft,
-  ChevronRight,
-  Expand,
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Link,
-  Award,
   Shield,
-  Leaf,
   Clock,
   Globe,
   Crown,
-  Gem,
-  Sparkles,
-  Package,
-  Calendar,
-  Palette,
-  Shirt,
-  Store,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -35,6 +17,8 @@ import Care from "@/components/sections/care";
 import SizeChart from "@/components/sections/sizeChart";
 import CraftsmanDetails from "@/components/sections/craftsmanDetails";
 import Contact from "@/components/sections/contact";
+import Features from "@/components/sections/features";
+import mainImg from "@/data/mainImg";
 import Loading from "@/components/sections/loading";
 
 export default function page() {
@@ -115,197 +99,197 @@ export default function page() {
   };
 
   // Loading Screen Component
-  if (isLoading) {
-    return (
-      <>
-        <Loading showTransition={showTransition} />
-        <style jsx global>{`
-          .retro-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #c0c0c0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            font-family: "MS Sans Serif", "Tahoma", sans-serif;
-            z-index: 9999;
-            transition: opacity 1s ease-out;
-          }
+  // if (isLoading) {
+  //   return (
+  //     <>
+  //       <Loading showTransition={showTransition} />
+  //       <style jsx global>{`
+  //         .retro-screen {
+  //           position: fixed;
+  //           top: 0;
+  //           left: 0;
+  //           width: 100vw;
+  //           height: 100vh;
+  //           background: #c0c0c0;
+  //           display: flex;
+  //           align-items: center;
+  //           justify-content: center;
+  //           padding: 20px;
+  //           font-family: "MS Sans Serif", "Tahoma", sans-serif;
+  //           z-index: 9999;
+  //           transition: opacity 1s ease-out;
+  //         }
 
-          .retro-screen.fade-out {
-            opacity: 0;
-          }
+  //         .retro-screen.fade-out {
+  //           opacity: 0;
+  //         }
 
-          .retro-window {
-            width: 420px;
-            max-width: 90vw;
-            background: #c0c0c0;
-            border: 2px outset #c0c0c0;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            animation: window-appear 0.8s ease-out;
-            margin-top: 20px;
-          }
+  //         .retro-window {
+  //           width: 420px;
+  //           max-width: 90vw;
+  //           background: #c0c0c0;
+  //           border: 2px outset #c0c0c0;
+  //           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  //           animation: window-appear 0.8s ease-out;
+  //           margin-top: 20px;
+  //         }
 
-          @keyframes window-appear {
-            0% {
-              opacity: 0;
-              transform: scale(0.8) translateY(20px);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1) translateY(0);
-            }
-          }
+  //         @keyframes window-appear {
+  //           0% {
+  //             opacity: 0;
+  //             transform: scale(0.8) translateY(20px);
+  //           }
+  //           100% {
+  //             opacity: 1;
+  //             transform: scale(1) translateY(0);
+  //           }
+  //         }
 
-          .retro-titlebar {
-            background: linear-gradient(
-              90deg,
-              #0000ff 0%,
-              #0040ff 50%,
-              #0080ff 100%
-            );
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 11px;
-            font-weight: bold;
-            height: 28px;
-            margin-top: 12px;
-            padding: 6px 10px;
-          }
+  //         .retro-titlebar {
+  //           background: linear-gradient(
+  //             90deg,
+  //             #0000ff 0%,
+  //             #0040ff 50%,
+  //             #0080ff 100%
+  //           );
+  //           color: white;
+  //           display: flex;
+  //           justify-content: space-between;
+  //           align-items: center;
+  //           font-size: 11px;
+  //           font-weight: bold;
+  //           height: 28px;
+  //           margin-top: 12px;
+  //           padding: 6px 10px;
+  //         }
 
-          .retro-title {
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 0.8px;
-          }
+  //         .retro-title {
+  //           font-size: 14px;
+  //           font-weight: bold;
+  //           letter-spacing: 0.8px;
+  //         }
 
-          .retro-controls {
-            display: flex;
-            gap: 2px;
-          }
+  //         .retro-controls {
+  //           display: flex;
+  //           gap: 2px;
+  //         }
 
-          .retro-control-btn {
-            width: 20px;
-            height: 18px;
-            background: #c0c0c0;
-            border: 1px outset #c0c0c0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.1s;
-          }
+  //         .retro-control-btn {
+  //           width: 20px;
+  //           height: 18px;
+  //           background: #c0c0c0;
+  //           border: 1px outset #c0c0c0;
+  //           display: flex;
+  //           align-items: center;
+  //           justify-content: center;
+  //           cursor: pointer;
+  //           transition: all 0.1s;
+  //         }
 
-          .retro-control-btn:hover {
-            background: #d4d0c8;
-          }
+  //         .retro-control-btn:hover {
+  //           background: #d4d0c8;
+  //         }
 
-          .retro-control-btn:active {
-            border: 1px inset #c0c0c0;
-          }
+  //         .retro-control-btn:active {
+  //           border: 1px inset #c0c0c0;
+  //         }
 
-          .minimize-icon {
-            width: 6px;
-            height: 1px;
-            background: black;
-            margin-bottom: 2px;
-          }
+  //         .minimize-icon {
+  //           width: 6px;
+  //           height: 1px;
+  //           background: black;
+  //           margin-bottom: 2px;
+  //         }
 
-          .maximize-icon {
-            width: 6px;
-            height: 6px;
-            border: 1px solid black;
-            background: transparent;
-          }
+  //         .maximize-icon {
+  //           width: 6px;
+  //           height: 6px;
+  //           border: 1px solid black;
+  //           background: transparent;
+  //         }
 
-          .close-icon {
-            width: 8px;
-            height: 8px;
-            position: relative;
-          }
+  //         .close-icon {
+  //           width: 8px;
+  //           height: 8px;
+  //           position: relative;
+  //         }
 
-          .close-icon::before,
-          .close-icon::after {
-            content: "";
-            position: absolute;
-            width: 8px;
-            height: 1px;
-            background: black;
-            top: 50%;
-            left: 0;
-          }
+  //         .close-icon::before,
+  //         .close-icon::after {
+  //           content: "";
+  //           position: absolute;
+  //           width: 8px;
+  //           height: 1px;
+  //           background: black;
+  //           top: 50%;
+  //           left: 0;
+  //         }
 
-          .close-icon::before {
-            transform: rotate(45deg);
-          }
+  //         .close-icon::before {
+  //           transform: rotate(45deg);
+  //         }
 
-          .close-icon::after {
-            transform: rotate(-45deg);
-          }
+  //         .close-icon::after {
+  //           transform: rotate(-45deg);
+  //         }
 
-          .retro-content {
-            padding: 55px 45px;
-            text-align: center;
-            background: #c0c0c0;
-          }
+  //         .retro-content {
+  //           padding: 55px 45px;
+  //           text-align: center;
+  //           background: #c0c0c0;
+  //         }
 
-          .retro-text {
-            font-size: 20px;
-            color: black;
-            margin-bottom: 45px;
-            font-weight: normal;
-            letter-spacing: 0.5px;
-          }
+  //         .retro-text {
+  //           font-size: 20px;
+  //           color: black;
+  //           margin-bottom: 45px;
+  //           font-weight: normal;
+  //           letter-spacing: 0.5px;
+  //         }
 
-          .retro-loading-bar {
-            display: flex;
-            gap: 1px;
-            justify-content: center;
-            margin-bottom: 20px;
-          }
+  //         .retro-loading-bar {
+  //           display: flex;
+  //           gap: 1px;
+  //           justify-content: center;
+  //           margin-bottom: 20px;
+  //         }
 
-          .loading-block {
-            width: 14px;
-            height: 18px;
-            border: 1px solid #808080;
-            transition: all 0.3s ease;
-          }
+  //         .loading-block {
+  //           width: 14px;
+  //           height: 18px;
+  //           border: 1px solid #808080;
+  //           transition: all 0.3s ease;
+  //         }
 
-          .loading-block.loaded {
-            background: #0000ff;
-            border-color: #0000aa;
-            animation: block-fill 0.4s ease;
-          }
+  //         .loading-block.loaded {
+  //           background: #0000ff;
+  //           border-color: #0000aa;
+  //           animation: block-fill 0.4s ease;
+  //         }
 
-          .loading-block.empty {
-            background: white;
-            border-color: #808080;
-          }
+  //         .loading-block.empty {
+  //           background: white;
+  //           border-color: #808080;
+  //         }
 
-          @keyframes block-fill {
-            0% {
-              background: white;
-              transform: scale(1);
-            }
-            50% {
-              transform: scale(1.1);
-              background: #4444ff;
-            }
-            100% {
-              background: #0000ff;
-              transform: scale(1);
-            }
-          }
-        `}</style>
-      </>
-    );
-  }
+  //         @keyframes block-fill {
+  //           0% {
+  //             background: white;
+  //             transform: scale(1);
+  //           }
+  //           50% {
+  //             transform: scale(1.1);
+  //             background: #4444ff;
+  //           }
+  //           100% {
+  //             background: #0000ff;
+  //             transform: scale(1);
+  //           }
+  //         }
+  //       `}</style>
+  //     </>
+  //   );
+  // }
 
   // Main Product Page
   return (
@@ -318,7 +302,7 @@ export default function page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {/* Elegant Photo Section */}
             <ImageSlider
-              productImages={productImages}
+              productImages={mainImg.map(img => img.src)}
               currentImageIndex={currentImageIndex}
               setCurrentImageIndex={setCurrentImageIndex}
               prevImage={prevImage}
@@ -327,7 +311,10 @@ export default function page() {
             />
 
             {/* Elegant Product Details */}
-            <Details />
+          <div className="space-y-6 sm:space-y-8">
+             <Details />
+             <Features/>
+           </div>
           </div>
 
           {/* Redesigned Care Instructions */}

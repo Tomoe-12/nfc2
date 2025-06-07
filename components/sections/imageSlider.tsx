@@ -4,23 +4,23 @@ import { ChevronLeft, ChevronRight, Crown } from "lucide-react";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
 
-interface ImageSliderProps {
+type ImageSliderProps = {
   productImages: string[];
   currentImageIndex: number;
   setCurrentImageIndex: (index: number) => void;
   prevImage: () => void;
   nextImage: () => void;
   goToImage: (index: number) => void;
-}
+};
 
-const ImageSlider: React.FC<ImageSliderProps> = ({
+const ImageSlider = ({
   productImages,
   currentImageIndex,
   setCurrentImageIndex,
   prevImage,
   nextImage,
   goToImage,
-}) => {
+}: ImageSliderProps) => {
   return (
     <div className="space-y-4 sm:space-y-6">
       {/* Main Image with Auto-scroll */}
