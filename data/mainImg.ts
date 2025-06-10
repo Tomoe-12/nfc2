@@ -19,6 +19,11 @@ const mainImg = [
     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlemgGYjlLJl3H0Nmxd7RCYODFjgtVAPKQTu4i",
     alt: "A beautiful landscape with mountains and a lake",
   },
+    {
+    id: 4,
+    src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlemgGYjlLJl3H0Nmxd7RCYODFjgtVAPKQTu4i",
+    alt: "A beautiful landscape with mountains and a lake",
+  },
 ];
 
 export default mainImg

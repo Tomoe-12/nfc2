@@ -36,17 +36,17 @@ const Contact = () => {
             <div className="flex gap-4 sm:gap-6">
               {[
                 { icon: Facebook, color: "text-blue-400" },
-                { icon: Instagram, color: "text-white" },
+                { icon: Instagram, color: "text-blue-400" },
                 { icon: "T", color: "text-blue-400" },
               ].map((social, index) => (
                 <Button
                   key={index}
                   variant="ghost"
                   size="icon"
-                  className={`${social.color} hover:scale-110 transform transition-all duration-500 border border-blue-500/20 hover:border-blue-400/50 hover:bg-blue-500/10 w-10 h-10 sm:w-12 sm:h-12`}
+                  className={`${social.color} hover:text-white hover:scale-110 transform transition-all duration-500 border border-blue-500/20 hover:border-blue-400/50 hover:bg-blue-500/10 w-10 h-10 sm:w-12 sm:h-12`}
                 >
                   {typeof social.icon === "string" ? (
-                    <span className="text-lg sm:text-xl font-bold font-serif">
+                    <span className="text-lg sm:text-xl font-bold font-serif  ">
                       {social.icon}
                     </span>
                   ) : (

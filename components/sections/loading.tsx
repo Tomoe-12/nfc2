@@ -6,7 +6,7 @@ interface LoadingProps {
 
 const Loading = ({ showTransition }: LoadingProps) => {
   return (
-    <div className={`retro-screen ${showTransition ? "fade-out" : ""}`}>
+    <div className={`retro-screen bg-black ${showTransition ? "fade-out" : ""}`}>
           <div className="retro-window">
             {/* Window Title Bar */}
             <div className="retro-titlebar">
