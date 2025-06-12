@@ -10,65 +10,14 @@ import ImageSlider from "@/components/sections/imageSlider";
 import Details from "@/components/sections/details";
 import Care from "@/components/sections/care";
 import SizeChart from "@/components/sections/sizeChart";
-import CraftsmanDetails from "@/components/sections/craftsmanDetails";
 import Contact from "@/components/sections/contact";
 import Features from "@/components/sections/features";
 import mainImg from "@/data/mainImg";
-import Loading from "@/components/sections/loading";
 
 export default function page() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingProgress, setLoadingProgress] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showTransition, setShowTransition] = useState(false);
   const audioContext = useRef<AudioContext | null>(null);
-
-
-  // Loading screen effect
-  useEffect(() => {
-    // Initialize audio context
-    audioContext.current = new (window.AudioContext ||
-      (window as any).webkitAudioContext)();
-
-    // Play sound effect
-    const playSound = () => {
-      if (!audioContext.current) return;
-
-      const oscillator = audioContext.current.createOscillator();
-      const gainNode = audioContext.current.createGain();
-
-      oscillator.type = "sine";
-      oscillator.frequency.setValueAtTime(
-        440,
-        audioContext.current.currentTime
-      ); // A4 note
-      gainNode.gain.setValueAtTime(0.1, audioContext.current.currentTime); // Adjust volume
-
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.current.destination);
-
-      oscillator.start(audioContext.current.currentTime);
-      oscillator.stop(audioContext.current.currentTime + 0.3); // Play for 0.3 seconds
-    };
-
-    playSound();
-
-    // Simple timeout instead of animated progress
-    const loadingTimeout = setTimeout(() => {
-      setShowTransition(true);
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
-    }, 2000); // Show loading for 2 seconds
-
-    return () => {
-      clearTimeout(loadingTimeout);
-      if (audioContext.current) {
-        audioContext.current.close();
-        audioContext.current = null;
-      }
-    };
-  }, []);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -86,14 +35,6 @@ export default function page() {
     setCurrentImageIndex(index);
   };
 
-  // Loading Screen Component
-  if (isLoading) {
-    return (
-      <>
-        <Loading showTransition={showTransition} />
-      </>
-    );
-  }
 
   // Main Product Page
   return (
