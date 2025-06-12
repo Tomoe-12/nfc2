@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Shield, Clock, Globe, Crown } from "lucide-react";
+import { Shield, Clock, Globe, Crown, Radio } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -23,13 +23,6 @@ export default function page() {
   const [showTransition, setShowTransition] = useState(false);
   const audioContext = useRef<AudioContext | null>(null);
 
-  const productImages = [
-    "/placeholder.svg?height=600&width=600&text=Product+Front",
-    "/placeholder.svg?height=600&width=600&text=Product+Back",
-    "/placeholder.svg?height=600&width=600&text=Product+Side",
-    "/placeholder.svg?height=600&width=600&text=Product+Detail",
-    "/placeholder.svg?height=600&width=600&text=Product+Lifestyle",
-  ];
 
   // Loading screen effect
   useEffect(() => {
@@ -79,13 +72,13 @@ export default function page() {
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === productImages.length - 1 ? 0 : prevIndex + 1
+      prevIndex === mainImg.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? productImages.length - 1 : prevIndex - 1
+      prevIndex === 0 ? mainImg.length - 1 : prevIndex - 1
     );
   };
 
@@ -209,6 +202,23 @@ export default function page() {
                         <div className="mt-1">
                           <Badge className="bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-300 border-amber-500/30 font-light text-xs">
                             One of 100 Exclusive Pieces
+                          </Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="luxury-detail-item">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
+                        <Radio className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">
+                          NFC Technology
+                        </span>
+                        <div className="mt-1">
+                          <Badge className="bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 border-green-500/30 font-light text-xs">
+                            Embedded Smart Chip
                           </Badge>
                         </div>
                       </div>

@@ -33,6 +33,7 @@ const ImageSlider = ({
             height={600}
             className="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-105 filter brightness-110"
             priority
+            
           />
           {/* Elegant overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-blue-500/5 pointer-events-none"></div>
@@ -103,6 +104,7 @@ const ImageSlider = ({
               width={120}
               height={120}
               className="w-full h-full object-cover filter brightness-110"
+              priority
             />
           </button>
         ))}

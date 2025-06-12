@@ -36,7 +36,7 @@ const Details = () => {
                     {item.label}
                   </p>
                   <div className="flex items-center gap-2">
-                    <p className="text-white font-semibold text-sm sm:text-lg">
+                    <p className="text-white font-semibold text-xs sm:text-lg">
                       {item.value}
                     </p>
                     {item.hasLink && (
