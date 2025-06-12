@@ -25,7 +25,7 @@ const Details = () => {
             Product Specifications
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-6">
             {productDetails.map((item) => (
               <div key={item.id} className="luxury-spec-item">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
