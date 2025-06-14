@@ -1,10 +1,8 @@
 "use client";
 
 export const dynamic = "force-static";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Shield, Clock, Globe, Crown, Radio } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/sections/header";
 import ImageSlider from "@/components/sections/imageSlider";
@@ -17,8 +15,6 @@ import mainImg from "@/data/mainImg";
 
 export default function page() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [showTransition, setShowTransition] = useState(false);
-  const audioContext = useRef<AudioContext | null>(null);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
