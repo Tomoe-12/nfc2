@@ -54,7 +54,7 @@ const Care = () => {
                 <div className="relative flex items-center justify-center w-20 h-20 rounded-full ">
                   {/* cross */}
                   <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <X className="w-14 h-14 stroke-1 text-white-500 " />
+                    <X className="w-10 h-10 sm:w-14 sm:h-14 stroke-1 text-white-500 " />
                   </div>
 
                   {/* icon */}
