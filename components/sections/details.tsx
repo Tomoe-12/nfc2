@@ -1,3 +1,4 @@
+"use client"
 import productDetails from "@/data/productDetail";
 import {
   Calendar,
@@ -10,17 +11,17 @@ import {
   Gem,
   ExternalLinkIcon,
 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
 // Data object for product specifications
 
-interface DetailsProps {
-  size: string;
-  name: string;
-  url: string;
-}
 
-const Details = ({ size, name, url }: DetailsProps) => {
+const Details = () => {
+  const params = useSearchParams();
+  const size = params.get("size") ?? "M";
+  const url = params.get("url") ?? "sanshin028";
+
   return (
     <div className="space-y-6 sm:space-y-8">
       <div className="luxury-card">

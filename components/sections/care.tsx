@@ -1,4 +1,5 @@
-import { Ban, Droplets, Expand, Hand, X } from "lucide-react";
+"use client"
+import { Expand ,X } from "lucide-react";
 import React from "react";
 
 const Care = () => {

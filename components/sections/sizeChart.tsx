@@ -1,12 +1,14 @@
+"use client"
+
 import sizeChart from "@/data/size";
 import { Globe } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
-interface SizeChartProps {
-  size: string;
-}
 
-const SizeChart = ({ size }: SizeChartProps) => {
+const SizeChart = () => {
+  const params = useSearchParams();
+  const size = params.get("size") ?? "M";
   const sizeData = sizeChart.find((item) => item.id === size);
   return (
     <div className="luxury-card mt-8 sm:mt-12">

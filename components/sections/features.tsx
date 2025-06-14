@@ -1,3 +1,4 @@
+"use client"
 import { Award, Crown, Leaf, Radio, Shield, Sparkles } from "lucide-react";
 import React from "react";
 

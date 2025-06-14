@@ -1,5 +1,4 @@
 "use client";
-
 export const dynamic = "force-static";
 import { useState } from "react";
 import { Shield, Clock, Globe, Crown, Radio } from "lucide-react";
@@ -13,12 +12,7 @@ import Contact from "@/components/sections/contact";
 import Features from "@/components/sections/features";
 import mainImg from "@/data/mainImg";
 import { useSearchParams } from "next/navigation";
-
-export default function page() {
-  const params = useSearchParams()
-  const size = params.get("s") || "M";
-  const name = params.get("n") || "SanShin";
-  const url = params.get("u") || "@sanshin028";
+export default function Page() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -59,7 +53,7 @@ export default function page() {
 
             {/* Elegant Product Details */}
             <div className="space-y-6 sm:space-y-8">
-              <Details size={size} name={name} url={url} />
+              <Details  />
               <Features />
             </div>
           </div>
@@ -68,7 +62,7 @@ export default function page() {
           <Care />
 
           {/* Elegant Size Chart */}
-          <SizeChart size={size} />
+          <SizeChart  />
 
           {/* Elegant Details Grid */}
           <div className="mt-8 sm:mt-12">
