@@ -34,7 +34,7 @@ const productDetails = [
   {
     id: 6,
     icon: Store,
-    label: "Atelier",
+    label: "Purchased From",
     value: "SanShin",
     hasLink: true,
   },

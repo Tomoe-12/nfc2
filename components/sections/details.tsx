@@ -25,9 +25,9 @@ const Details = () => {
             Product Specifications
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-6">
             {productDetails.map((item) => (
-              <div key={item.id} className="luxury-spec-item">
+              <div key={item.id} className="luxury-spec-item cursor-pointer" >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
@@ -40,7 +40,7 @@ const Details = () => {
                       {item.value}
                     </p>
                     {item.hasLink && (
-                      <Link className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400 hover:text-blue-300 transition-colors" />
+                      <Link className="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-blue-400 hover:text-blue-300 transition-colors" />
                     )}
                   </div>
                 </div>

@@ -6,10 +6,10 @@ const Contact = () => {
   return (
     <div className="luxury-card mt-8 sm:mt-12">
       <div className="p-4 sm:p-8 md:p-12">
-        <h2 className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-3 sm:mb-6 font-serif">
+        <h2 className="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 mb-3 sm:mb-6 font-serif">
           Concierge Service
         </h2>
-        <p className="text-blue-200/80 mb-6 sm:mb-10 font-light tracking-wide text-sm sm:text-lg">
+        <p className="text-blue-200/80 mb-6 sm:mb-10 font-light tracking-wide text-xs sm:text-base">
           Our luxury concierge team is at your service for any inquiries
         </p>
 
