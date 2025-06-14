@@ -22,8 +22,8 @@ const Header = () => {
                 <Image
                   src="../../logo-white-svg.svg"
                   alt="logo"
-                  width={25}
-                  height={25}
+                  width={27}
+                  height={27}
                 />
               </div>
             </div>

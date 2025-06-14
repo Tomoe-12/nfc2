@@ -1,6 +1,5 @@
 "use client";
-export const dynamic = "force-static";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Shield, Clock, Globe, Crown, Radio } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/sections/header";
@@ -11,7 +10,6 @@ import SizeChart from "@/components/sections/sizeChart";
 import Contact from "@/components/sections/contact";
 import Features from "@/components/sections/features";
 import mainImg from "@/data/mainImg";
-import { useSearchParams } from "next/navigation";
 export default function Page() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -53,7 +51,9 @@ export default function Page() {
 
             {/* Elegant Product Details */}
             <div className="space-y-6 sm:space-y-8">
-              <Details  />
+             <Suspense>
+               <Details  />
+             </Suspense>
               <Features />
             </div>
           </div>
@@ -62,7 +62,9 @@ export default function Page() {
           <Care />
 
           {/* Elegant Size Chart */}
-          <SizeChart  />
+         <Suspense>
+           <SizeChart  />
+         </Suspense>
 
           {/* Elegant Details Grid */}
           <div className="mt-8 sm:mt-12">
