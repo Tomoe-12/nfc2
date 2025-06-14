@@ -24,6 +24,7 @@ const Header = () => {
                   alt="logo"
                   width={27}
                   height={27}
+                  priority
                 />
               </div>
             </div>

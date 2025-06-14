@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-static";
 import { Suspense, useState } from "react";
 import { Shield, Clock, Globe, Crown, Radio } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
