@@ -2,9 +2,12 @@ import sizeChart from "@/data/size";
 import { Globe } from "lucide-react";
 import React from "react";
 
+interface SizeChartProps {
+  size: string;
+}
 
-
-const SizeChart = () => {
+const SizeChart = ({ size }: SizeChartProps) => {
+  const sizeData = sizeChart.find((item) => item.id === size);
   return (
     <div className="luxury-card mt-8 sm:mt-12">
       <div className="p-4 sm:p-6 md:p-8">
@@ -34,23 +37,31 @@ const SizeChart = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-blue-500/5 transition-colors border-b border-blue-500/10">
-                <td className="p-3 sm:p-6 text-white font-semibold text-sm sm:text-lg">
-                  {sizeChart.size}
-                </td>
-                <td className="p-3 sm:p-6 text-white font-light text-sm">
-                  {sizeChart.shoulder}"
-                </td>
-                <td className="p-3 sm:p-6 text-white font-light text-sm">
-                  {sizeChart.chest}"
-                </td>
-                <td className="p-3 sm:p-6 text-white font-light text-sm">
-                  {sizeChart.sleeve}"
-                </td>
-                <td className="p-3 sm:p-6 text-white font-light text-sm">
-                  {sizeChart.length}"
-                </td>
-              </tr>
+              {sizeData ? (
+                <tr className="hover:bg-blue-500/5 transition-colors border-b border-blue-500/10">
+                  <td className="p-3 sm:p-6 text-white font-semibold text-sm sm:text-lg">
+                    {sizeData.size}
+                  </td>
+                  <td className="p-3 sm:p-6 text-white font-light text-sm">
+                    {sizeData.shoulder}"
+                  </td>
+                  <td className="p-3 sm:p-6 text-white font-light text-sm">
+                    {sizeData.chest}"
+                  </td>
+                  <td className="p-3 sm:p-6 text-white font-light text-sm">
+                    {sizeData.sleeve}"
+                  </td>
+                  <td className="p-3 sm:p-6 text-white font-light text-sm">
+                    {sizeData.length}"
+                  </td>
+                </tr>
+              ) : (
+                <tr>
+                  <td colSpan={5} className="p-3 sm:p-6 text-white text-center">
+                    Size data not found.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

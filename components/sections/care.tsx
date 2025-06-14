@@ -18,7 +18,7 @@ const Care = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
-              icon: <Expand className="h-6 w-6 sm:h-8 sm:w-8" />,
+              icon: <Expand className="h-5 w-5 sm:h-7 sm:w-7" />,
               title: "Machine Wash Cold",
               description:
                 "Gentle cycle, cold water, wash alone and inside out.",
@@ -54,22 +54,16 @@ const Care = () => {
                 <div className="relative flex items-center justify-center w-20 h-20 rounded-full ">
                   {/* cross */}
                   <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <X className="w-10 h-10 sm:w-14 sm:h-14 stroke-1 text-white-500 " />
+                    <X className="w-9 h-9 sm:w-12 sm:h-12 stroke-1 text-white-500 " />
                   </div>
 
                   {/* icon */}
                   <svg
-                    shape-rendering="geometricPrecision"
-                    text-rendering="geometricPrecision"
-                    image-rendering="optimizeQuality"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
                     viewBox="0 0 512 333.567"
-                    className="h-6 w-6 sm:h-8 sm:w-8"
+                    className="h-5 w-5 sm:h-7 sm:w-7"
                   >
                     <path
                       fill="#ffffff"
-                      fill-rule="nonzero"
                       d="M88.077 97.366V83.454c0-22.973 9.379-43.838 24.497-58.957C127.693 9.378 148.559 0 171.531 0h168.938c22.972 0 43.838 9.378 58.956 24.497 15.119 15.119 24.498 35.984 24.498 58.957v13.912h14.301c8.113 0 15.239 2.696 20.676 7.384 5.082 4.382 8.599 10.463 9.975 17.663h.16c23.641 0 42.965 19.325 42.965 42.966v3.934c0 23.638-19.326 42.965-42.965 42.965-143.89 0-287.806-.239-431.705-.372C16.33 209.127 0 191.044 0 169.313v-3.934c0-23.643 19.323-42.966 42.965-42.966h.163c2.885-15.096 15.143-25.047 30.649-25.047h14.3zM449.838 226.66l11.542 63.495c2.256 14.087.639 24.645-4.842 31.975-5.582 7.465-14.677 11.161-27.287 11.404a5.732 5.732 0 01-.618.033h-8.692l-5.295-65.248c-.329-4.128-3.541-7.171-7.173-6.797-3.632.373-6.31 4.022-5.981 8.15l5.185 63.895h-30.719l-5.295-65.248c-.329-4.128-3.54-7.171-7.172-6.797-3.633.373-6.31 4.022-5.982 8.15l5.186 63.895h-32.374l-3.07-64.847c-.186-4.143-3.293-7.331-6.939-7.12-3.646.211-6.452 3.741-6.266 7.885l3.034 64.082h-31.876l-3.069-64.847c-.186-4.143-3.293-7.331-6.94-7.12-3.646.211-6.451 3.741-6.265 7.885l3.034 64.082h-31.398l-1.651-64.778c-.1-4.143-3.137-7.41-6.783-7.297-3.647.114-6.522 3.566-6.422 7.709l1.64 64.366h-31.985l-.174-64.572c0-4.143-2.957-7.503-6.603-7.503s-6.602 3.36-6.602 7.503l.174 64.572h-32.625l5.185-63.895c.328-4.128-2.349-7.777-5.982-8.15-3.632-.374-6.843 2.669-7.172 6.797l-5.295 65.248H105.47l5.186-63.895c.328-4.128-2.349-7.777-5.982-8.15-3.632-.374-6.843 2.669-7.172 6.797l-5.295 65.248h-11.35v-.023c-.176 0-.353-.008-.531-.024-13.875-1.282-22.314-5.983-26.882-13.859-6.249-10.776-3.498-24.175-1.341-35.852l10.618-57.506 387.117.357zM378.001 97.366V83.454c0-10.298-4.232-19.679-11.043-26.49-6.81-6.81-16.191-11.043-26.489-11.043H171.531c-10.298 0-19.679 4.233-26.489 11.043-6.811 6.811-11.043 16.192-11.043 26.49v13.912h244.002z"
                     />
                   </svg>
@@ -91,7 +85,7 @@ const Care = () => {
                   height="500"
                   preserveAspectRatio="xMidYMid meet"
                   version="1.2"
-                  className="h-6 w-6 sm:h-8 sm:w-8 fill-white"
+                  className="h-5 w-5 sm:h-7 sm:w-7 fill-white"
                 >
                   <g id="e51eba772b">
                     <path
@@ -123,7 +117,7 @@ const Care = () => {
                   height="500"
                   preserveAspectRatio="xMidYMid meet"
                   version="1.2"
-                  className="h-6 w-6 sm:h-8 sm:w-8 fill-white"
+                  className="h-5 w-5 sm:h-7 sm:w-7 fill-white"
                 >
                   <g id="7806a9feaf">
                     <path
@@ -208,7 +202,7 @@ const Care = () => {
                   height="500"
                   preserveAspectRatio="xMidYMid meet"
                   version="1.2"
-                  className="h-8 w-8 sm:h-10 sm:w-10"
+                  className="h-6 w-6 sm:h-8 sm:w-8"
                 >
                   <defs>
                     <clipPath id="5db86cad04">
@@ -216,7 +210,7 @@ const Care = () => {
                     </clipPath>
                   </defs>
                   <g id="dd4f4a5a92">
-                    <g clip-rule="nonzero" clip-path="url(#5db86cad04)">
+                    <g>
                       <path
                         style={{
                           stroke: "none",

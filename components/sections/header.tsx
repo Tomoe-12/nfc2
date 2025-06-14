@@ -1,8 +1,16 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Expand } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
+  const handleClick = (link: string) => {
+    // Check if the link starts with http:// or https://
+    if (link.startsWith("https://") || link.startsWith("http://")) {
+      window.open(link, "_blank"); // open in new tab
+    }
+  };
+
   return (
     <div className="luxury-card mb-8 sm:mb-12">
       <div className="p-4 sm:p-6 md:p-8">
@@ -10,7 +18,12 @@ const Header = () => {
           <div className="flex items-center gap-3 sm:gap-6">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-2xl shadow-blue-500/30 luxury-glow">
               <div className="text-white font-bold text-lg sm:text-2xl font-serif">
-                S
+                <Image
+                  src="../../logo-white-svg.svg"
+                  alt="logo"
+                  width={25}
+                  height={25}
+                />
               </div>
             </div>
             <div>
@@ -25,9 +38,10 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
+            onClick={() => handleClick("https://www.tiktok.com/@sanshin028")}
             className="text-blue-300 hover:text-white transition-all duration-300 hover:bg-blue-500/20 border border-blue-500/30 hover:border-blue-400"
           >
-            <Expand className="h-4 w-4 sm:h-6 sm:w-6" />
+            <MoveUpRight className="h-4 w-4 sm:h-6 sm:w-6" />
           </Button>
         </div>
       </div>
