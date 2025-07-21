@@ -11,7 +11,6 @@ import SizeChart from "@/components/sections/sizeChart";
 import Contact from "@/components/sections/contact";
 import Features from "@/components/sections/features";
 import mainImg from "@/data/mainImg";
-import { useSearchParams } from "next/navigation";
 export default function Page() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
