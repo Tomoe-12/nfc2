@@ -40,7 +40,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => handleClick("https://www.tiktok.com/@sanshin028")}
+            onClick={() => handleClick("https://www.tiktok.com/@sanshin.offical")}
             className="text-blue-300 hover:text-white transition-all duration-300 hover:bg-blue-500/20 border border-blue-500/30 hover:border-blue-400"
           >
             <MoveUpRight className="h-4 w-4 sm:h-6 sm:w-6" />

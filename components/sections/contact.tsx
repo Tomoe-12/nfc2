@@ -56,7 +56,7 @@ const Contact = () => {
                 {
                   icon: TikTokIcon,
                   color: "text-blue-400",
-                  link: "https://www.tiktok.com/@sanshin028",
+                  link: "https://www.tiktok.com/@sanshin.offical",
                 },
               ].map((social, index) => (
                 <Button

@@ -203,7 +203,7 @@ const Care = () => {
                   height="500"
                   preserveAspectRatio="xMidYMid meet"
                   version="1.2"
-                  className="h-6 w-6 sm:h-8 sm:w-8"
+                   className="h-6 w-6 sm:h-8 sm:w-8"
                 >
                   <defs>
                     <clipPath id="5db86cad04">
@@ -241,7 +241,7 @@ const Care = () => {
               {/* Animated background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              <div className="relative p-4 sm:p-6">
+              <div className="relative p-4 sm:p-6 h-full ">
                 {/* Icon container */}
                 <div
                   className={`w-12 h-12 sm:w-16 sm:h-16 ${care.iconBg} rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto relative overflow-hidden group-hover:scale-110 transition-transform duration-300`}
